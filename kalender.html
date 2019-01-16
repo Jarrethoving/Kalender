@@ -55,13 +55,13 @@
         document.body.innerHTML +="<br>"+ keuze[1];
         document.body.innerHTML +="<br>"+ keuze[0];
 
+        var d = new Date(keuze[0], keuze[1]);
+
         var monthNames = [ "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December" ];
 
-        var d = new Date(keuze[0], monthNames[keuze[1]]);
-
         document.body.innerHTML += "<br>" + d.getFullYear();
-        document.body.innerHTML += "<br>" +d.getMonth();
+        document.body.innerHTML += "<br>" + monthNames[d.getMonth()];
       }
     }
     </script>
