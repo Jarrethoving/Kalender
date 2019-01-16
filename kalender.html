@@ -54,14 +54,18 @@
       } else {
         document.write(keuze[1]);
         document.write(" " + keuze[0]);
-        document.write("test");
+
       }
-      
+
+
     }
-    var d = new Date(year, month, day);
+    var d = new Date();
+    var currentYear = d.getFullYear();
+
+    document.write(currentYear);
 
 
-    
+
     </script>
 
   </body>
