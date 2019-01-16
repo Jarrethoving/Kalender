@@ -14,18 +14,18 @@
     Selecteer maand:
     <select id="Maand" name="maand">
       <option value="">Kies een maand</option>
-      <option value="0">Januari</option>
-      <option value="1">Februari</option>
-      <option value="2">Maart</option>
-      <option value="3">April</option>
-      <option value="4">Mei</option>
-      <option value="5">Juni</option>
-      <option value="6">Juli</option>
-      <option value="7">Augustus</option>
-      <option value="8">September</option>
-      <option value="9">Oktober</option>
-      <option value="10">November</option>
-      <option value="11">December</option>
+      <option value="1">Januari</option>
+      <option value="2">Februari</option>
+      <option value="3">Maart</option>
+      <option value="4">April</option>
+      <option value="5">Mei</option>
+      <option value="6">Juni</option>
+      <option value="7">Juli</option>
+      <option value="8">Augustus</option>
+      <option value="9">September</option>
+      <option value="10">Oktober</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
     </select>
 
     Selecteer jaar:
@@ -67,9 +67,25 @@
         var monthNames = [ "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December" ];
 
+
+        var weekday = new Array(7);
+         weekday[0] = "Sunday";
+         weekday[1] = "Monday";
+         weekday[2] = "Tuesday";
+         weekday[3] = "Wednesday";
+         weekday[4] = "Thursday";
+         weekday[5] = "Friday";
+         weekday[6] = "Saturday";
+
+
+
         document.body.innerHTML += "<br>" + d.getFullYear();
-        document.body.innerHTML += "<br>" + monthNames[d.getMonth()];
-        document.body.innerHTML += "<br>" + getDaysInMonth(d.getMonth(), keuze[0]);
+        document.body.innerHTML += "<br>" + monthNames[d.getMonth()-1];
+        document.body.innerHTML += "<br>" + daysInMonth(keuze[1], keuze[0]);
+        document.body.innerHTML += "<br>" + weekday[d.getDay()];
+
+      // De weekdag begint nu wel op de nieuwe maand.
+
       }
     }
     </script>
