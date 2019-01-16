@@ -55,24 +55,15 @@
         document.write(keuze[1]);
         document.write(" " + keuze[0]);
 
+        var monthNames = [ "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December" ];
 
-        var d = new Date(keuze[0], keuze[1]); {
+        var d = new Date(keuze[0], monthNames[keuze[1]]); 
 
         document.write("<br> " +d.getFullYear());
         document.write("<br>" +d.getMonth());
-
-
-        }
       }
-
-
     }
-
-
-    var monthNames = [ "January", "February", "March", "April", "May", "June",
-"July", "August", "September", "October", "November", "December" ];
-
-
     </script>
 
   </body>
