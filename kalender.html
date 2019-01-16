@@ -14,18 +14,18 @@
     Selecteer maand:
     <select id="Maand" name="maand">
       <option value="">Kies een maand</option>
-      <option value="Januari">Januari</option>
-      <option value="Februari">Februari</option>
-      <option value="Maart">Maart</option>
-      <option value="April">April</option>
-      <option value="Mei">Mei</option>
-      <option value="Juni">Juni</option>
-      <option value="Juli">Juli</option>
-      <option value="Augustus">Augustus</option>
-      <option value="September">September</option>
-      <option value="Oktober">Oktober</option>
-      <option value="November">November</option>
-      <option value="December">December</option>
+      <option value="0">Januari</option>
+      <option value="1">Februari</option>
+      <option value="2">Maart</option>
+      <option value="3">April</option>
+      <option value="4">Mei</option>
+      <option value="5">Juni</option>
+      <option value="6">Juli</option>
+      <option value="7">Augustus</option>
+      <option value="8">September</option>
+      <option value="9">Oktober</option>
+      <option value="10">November</option>
+      <option value="11">December</option>
     </select>
 
     Selecteer jaar:
@@ -55,17 +55,23 @@
         document.write(keuze[1]);
         document.write(" " + keuze[0]);
 
+
+        var d = new Date(keuze[0], keuze[1]); {
+
+        document.write("<br> " +d.getFullYear());
+        document.write("<br>" +d.getMonth());
+
+
+        }
       }
 
 
     }
-    var d = new Date();
-    var currentYear = d.getFullYear();
 
-    document.write(currentYear);
 
     var monthNames = [ "January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December" ];
+
 
     </script>
 
