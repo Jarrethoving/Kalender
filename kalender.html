@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Algortime Kalender</title>
+    <!--Lab opdracht 16
+        Jarret Hoving
+        AFX1
+      97060966 -->
+  </head>
+  <body>
+
+
+    Selecteer maand:
+    <select id="Maand" name="maand">
+      <option value="">Kies een maand</option>
+      <option value="Januari">Januari</option>
+      <option value="Februari">Februari</option>
+      <option value="Maart">Maart</option>
+      <option value="April">April</option>
+      <option value="Mei">Mei</option>
+      <option value="Juni">Juni</option>
+      <option value="Juli">Juli</option>
+      <option value="Augustus">Augustus</option>
+      <option value="September">September</option>
+      <option value="Oktober">Oktober</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+
+    Selecteer jaar:
+    <select id="Jaar" name="jaar">
+        <option value="">kies een jaar</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+    </select>
+
+    <input type="submit" onclick="submit()" value="Print Kalender">
+
+
+    <script>
+
+
+    function submit(){
+      var keuze = new Array();
+      keuze[0] = document.getElementById("Jaar").value;
+      keuze[1] = document.getElementById("Maand").value;
+
+      if(keuze[0] == "" || keuze[1] == "" ){
+        document.write("U heeft geen maand of jaar geselecteerd");
+      } else {
+        document.write(keuze[1]);
+        document.write(" " + keuze[0]);
+        document.write("test");§
+      }
+
+    }
+
+
+    </script>
+
+  </body>
+</html>
