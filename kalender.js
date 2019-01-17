@@ -1,4 +1,3 @@
-
 function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
@@ -21,6 +20,7 @@ function printTable(monthLength) {
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
+
     tblBody.appendChild(row);
   }
 
