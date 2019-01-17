@@ -70,7 +70,5 @@ function submit(){
       document.body.innerHTML += "<br>" + daysInMonth(keuze[1], keuze[0]);
       document.body.innerHTML += "<br>" + weekday[d.getDay()];
       printTable(daysInMonth(keuze[1], keuze[0]));
-    // De weekdag begint nu wel op de nieuwe maand.
-
     }
   }
