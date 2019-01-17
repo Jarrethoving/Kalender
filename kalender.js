@@ -1,3 +1,7 @@
+var keuze = new Array();
+keuze[0] = document.getElementById("Jaar").value;
+keuze[1] = document.getElementById("Maand").value;
+
 function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
@@ -29,10 +33,14 @@ function printTable(monthLength) {
   tbl.setAttribute("border", "2");
 }
 
+function test() {
+    keuze[0] = 2018;
+    keuze[1] = 1;
+    submit();
+}
+
 function submit(){
-    var keuze = new Array();
-    keuze[0] = document.getElementById("Jaar").value;
-    keuze[1] = document.getElementById("Maand").value;
+
 
     // Check if data is entered
     if(keuze[0] == "" || keuze[1] == "" ){
