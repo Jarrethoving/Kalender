@@ -42,9 +42,13 @@
         return new Date(year, month, 0).getDate();
     }
 
+    function innerPrint(string) {
+      document.body.innerHTML += string;
+    }
+
     function printTable(monthLength) {
-      document.body.innerHTML += "<table>";
-          document.body.innerHTML += "<tr>";
+      innerPrint("<table border='1' cellpadding='3'>");
+        innerPrint(document.body.innerHTML += "<thead><tr>");
           document.body.innerHTML += "<th>zo</th>";
           document.body.innerHTML += "<th>ma</th>";
           document.body.innerHTML += "<th>di</th>";
@@ -52,13 +56,15 @@
           document.body.innerHTML += "<th>do</th>";
           document.body.innerHTML += "<th>vr</th>";
           document.body.innerHTML += "<th>za</th>";
-        document.body.innerHTML += "</tr>";
+        document.body.innerHTML += "</tr><thead>";
+        document.body.innerHTML += "<tbody>";
       for(var i = 1; i <= monthLength; i++) {
         document.body.innerHTML += "<tr>";
           document.body.innerHTML += "<td>" + i + "</td>";
         document.body.innerHTML += "<tr>";
       }
-      //document.body.innerHTML += "</table>";
+      document.body.innerHTML += "</tbody>";
+      document.body.innerHTML += "</table>";
     }
 
     // Na "Submit" staan de waarden in de array
