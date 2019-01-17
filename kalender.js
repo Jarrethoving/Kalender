@@ -1,7 +1,3 @@
-var keuze = new Array();
-keuze[0] = document.getElementById("Jaar").value;
-keuze[1] = document.getElementById("Maand").value;
-
 function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
@@ -15,8 +11,7 @@ function printTable(monthLength) {
   var tbl = document.createElement("table");
   var tblBody = document.createElement("tbody");
   var row = document.createElement("tr");
-
-  for (var i = 0; i < 1; i++) {
+  for (var i = 0; i < 5; i++) {
     var row = document.createElement("tr");
 
     for (var j = 0; j < monthLength; j++) {
@@ -24,9 +19,6 @@ function printTable(monthLength) {
       var cellText = document.createTextNode("cell in row "+i+", column "+j);
       cell.appendChild(cellText);
       row.appendChild(cell);
-      if(j == 7){
-        document.body.innerHTML +="<br>"
-      }
     }
 
     tblBody.appendChild(row);
@@ -38,12 +30,20 @@ function printTable(monthLength) {
 }
 
 function test() {
+    var keuze = new Array();
+    keuze[0] = document.getElementById("Jaar").value;
+    keuze[1] = document.getElementById("Maand").value;
+
     keuze[0] = 2018;
     keuze[1] = 1;
     submit();
 }
 
 function submit(){
+    var keuze = new Array();
+    keuze[0] = document.getElementById("Jaar").value;
+    keuze[1] = document.getElementById("Maand").value;
+
     // Check if data is entered
     if(keuze[0] == "" || keuze[1] == "" ){
       document.write("U heeft geen maand of jaar geselecteerd");
@@ -70,5 +70,7 @@ function submit(){
       document.body.innerHTML += "<br>" + daysInMonth(keuze[1], keuze[0]);
       document.body.innerHTML += "<br>" + weekday[d.getDay()];
       printTable(daysInMonth(keuze[1], keuze[0]));
+    // De weekdag begint nu wel op de nieuwe maand.
+
     }
   }
