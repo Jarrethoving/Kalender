@@ -43,11 +43,20 @@
     }
 
     function printTable(monthLength) {
+      document.body.innerHTML += "<table>";
+          document.body.innerHTML += "<tr>";
+          document.body.innerHTML += "<th>zo</th>";
+          document.body.innerHTML += "<th>ma</th>";
+          document.body.innerHTML += "<th>di</th>";
+          document.body.innerHTML += "<th>wo</th>";
+          document.body.innerHTML += "<th>do</th>";
+          document.body.innerHTML += "<th>vr</th>";
+          document.body.innerHTML += "<th>za</th>";
+        document.body.innerHTML += "</tr>";
       for(var i = 1; i <= monthLength; i++) {
-        document.body.innerHTML += "<div>";
-
-        document.body.innerHTML += "</div>";
+        document.body.innerHTML += "<td>" + "</td>";
       }
+      document.body.innerHTML += "</table>";
     }
 
     // Na "Submit" staan de waarden in de array
