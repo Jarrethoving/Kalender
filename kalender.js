@@ -21,7 +21,6 @@ function printTable(monthLength) {
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
-
     tblBody.appendChild(row);
   }
 
