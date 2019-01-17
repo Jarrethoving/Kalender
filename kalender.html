@@ -36,77 +36,20 @@
 
     <input type="submit" onclick="submit()" value="Print Kalender">
 
-    <script>
-
-    function daysInMonth(month, year) {
-        return new Date(year, month, 0).getDate();
-    }
-
-    function innerPrint(string) {
-      document.body.innerHTML += string;
-    }
-
-    function printTable(monthLength) {
-      innerPrint("<table border='1' cellpadding='3'>");
-        innerPrint("<thead><tr>");
-          innerPrint("<th>zo</th>");
-          innerPrint("<th>ma</th>");
-          innerPrint("<th>di</th>");
-          innerPrint("<th>wo</th>");
-          innerPrint("<th>do</th>");
-          innerPrint("<th>vr</th>");
-          innerPrint("<th>za</th>");
-          innerPrint("</tr><thead>");
-        innerPrint("<tbody>");
-      for(var i = 1; i <= monthLength; i++) {
-        innerPrint("<tr>");
-          innerPrint("<td>" + i + "</td>");
-          innerPrint("<tr>");
-      }
-      innerPrint("</tbody>");
-      innerPrint("</table>");
-    }
-
-    // Na "Submit" staan de waarden in de array
-    // Hierna komt er een if-else statement die er voor zorgt dat
-    // dat het een input heeft
-
-
-    function submit(){
-      var keuze = new Array();
-      keuze[0] = document.getElementById("Jaar").value;
-      keuze[1] = document.getElementById("Maand").value;
-
-      // Check if data is entered
-      if(keuze[0] == "" || keuze[1] == "" ){
-        document.write("U heeft geen maand of jaar geselecteerd");
-      } else {
-        document.body.innerHTML +="<br>"+ keuze[1];
-        document.body.innerHTML +="<br>"+ keuze[0];
-
-        var d = new Date(keuze[0], keuze[1]);
-
-        var monthNames = [ "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"];
-
-        var weekday = new Array(7);
-         weekday[0] = "Sunday";
-         weekday[1] = "Monday";
-         weekday[2] = "Tuesday";
-         weekday[3] = "Wednesday";
-         weekday[4] = "Thursday";
-         weekday[5] = "Friday";
-         weekday[6] = "Saturday";
-
-        document.body.innerHTML += "<br>" + d.getFullYear();
-        document.body.innerHTML += "<br>" + monthNames[d.getMonth()-1];
-        document.body.innerHTML += "<br>" + daysInMonth(keuze[1], keuze[0]);
-        document.body.innerHTML += "<br>" + weekday[d.getDay()];
-        printTable(daysInMonth(keuze[1], keuze[0]));
-      // De weekdag begint nu wel op de nieuwe maand.
-
-      }
-    }
-    </script>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Zo</th>
+          <th>Ma</th>
+          <th>Di</th>
+          <th>Wo</th>
+          <th>Do</th>
+          <th>Vr</th>
+          <th>Za</th>
+        </tr>
+      </thead>
+    </table>
   </body>
+
+  <script src="kalender.js"></script>
 </html>
