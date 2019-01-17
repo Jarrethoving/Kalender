@@ -40,8 +40,6 @@ function test() {
 }
 
 function submit(){
-
-
     // Check if data is entered
     if(keuze[0] == "" || keuze[1] == "" ){
       document.write("U heeft geen maand of jaar geselecteerd");
