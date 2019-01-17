@@ -41,6 +41,12 @@
         return new Date(year, month, 0).getDate();
     }
 
+    function printTable(monthLength) {
+      for(var i = 1; i <= monthLength; i++) {
+        document.body.innerHTML += i + "<br>";
+      }
+    }
+
     // Na "Submit" staan de waarden in de array
     // Hierna komt er een if-else statement die er voor zorgt dat
     // dat het een input heeft
@@ -75,7 +81,7 @@
         document.body.innerHTML += "<br>" + monthNames[d.getMonth()-1];
         document.body.innerHTML += "<br>" + daysInMonth(keuze[1], keuze[0]);
         document.body.innerHTML += "<br>" + weekday[d.getDay()];
-
+        printTable(daysInMonth(keuze[1], keuze[0]));
       // De weekdag begint nu wel op de nieuwe maand.
 
       }
