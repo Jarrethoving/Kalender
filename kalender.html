@@ -53,9 +53,11 @@
           document.body.innerHTML += "<th>za</th>";
         document.body.innerHTML += "</tr>";
       for(var i = 1; i <= monthLength; i++) {
-        document.body.innerHTML += "<td>" + "</td>";
+        document.body.innerHTML += "<tr>";
+          document.body.innerHTML += "<td>" + i + "</td>";
+        document.body.innerHTML += "<tr>";
       }
-      document.body.innerHTML += "</table>";
+      //document.body.innerHTML += "</table>";
     }
 
     // Na "Submit" staan de waarden in de array
