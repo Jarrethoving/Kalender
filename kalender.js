@@ -15,7 +15,8 @@ function printTable(monthLength) {
   var tbl = document.createElement("table");
   var tblBody = document.createElement("tbody");
   var row = document.createElement("tr");
-  for (var i = 0; i < 5; i++) {
+
+  for (var i = 0; i < 1; i++) {
     var row = document.createElement("tr");
 
     for (var j = 0; j < monthLength; j++) {
@@ -23,6 +24,9 @@ function printTable(monthLength) {
       var cellText = document.createTextNode("cell in row "+i+", column "+j);
       cell.appendChild(cellText);
       row.appendChild(cell);
+      if(j == 7){
+        document.body.innerHTML +="<br>"
+      }
     }
 
     tblBody.appendChild(row);
