@@ -34,10 +34,13 @@ function printTable(monthLength) {
 }
 
 function submit(){
+<<<<<<< HEAD
     var keuze = new Array();
     keuze[0] = document.getElementById("Jaar").value;
     keuze[1] = document.getElementById("Maand").value;
 
+=======
+>>>>>>> f2158fa593a6f708e8461e816adb2c93daadc965
     // Check if data is entered
     if(keuze[0] == "" || keuze[1] == "" ){
       document.write("U heeft geen maand of jaar geselecteerd");
@@ -64,7 +67,5 @@ function submit(){
       document.body.innerHTML += "<br>" + daysInMonth(keuze[1], keuze[0]);
       document.body.innerHTML += "<br>" + weekday[d.getDay()];
       printTable(daysInMonth(keuze[1], keuze[0]));
-    // De weekdag begint nu wel op de nieuwe maand.
-
     }
   }
