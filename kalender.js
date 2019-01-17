@@ -4,14 +4,41 @@ function daysInMonth(month, year) {
 }
 
 function printTable(monthLength) {
-    var table = document.createElement("table")
-    for(var i = 1; i <= monthLength; i++) {
-    document.createElement("<tr>");
-        document.createElement("<td>" + i + "</td>");
-        document.createElement("<tr>");
+    // for(var i = 1; i <= monthLength; i++) {
+
+    // }
+      // get the reference for the body
+  var body = document.getElementsByTagName("body")[0];
+
+  // creates a <table> element and a <tbody> element
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+
+  // creating all cells
+  for (var i = 0; i < 5; i++) {
+    // creates a table row
+    var row = document.createElement("tr");
+
+    for (var j = 0; j < 7; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode("cell in row "+i+", column "+j);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
     }
-    document.createElement("</tbody>");
-    document.createElement("</table>");
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
+  }
+
+  // put the <tbody> in the <table>
+  tbl.appendChild(tblBody);
+  // appends <table> into <body>
+  body.appendChild(tbl);
+  // sets the border attribute of tbl to 2;
+  tbl.setAttribute("border", "2");
 }
 
 function submit(){
