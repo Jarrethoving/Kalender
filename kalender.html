@@ -9,8 +9,6 @@
       97060966 -->
   </head>
   <body>
-
-
     Selecteer maand:
     <select id="Maand" name="maand">
       <option value="">Kies een maand</option>
@@ -56,6 +54,7 @@
       keuze[0] = document.getElementById("Jaar").value;
       keuze[1] = document.getElementById("Maand").value;
 
+      // Check if data is entered
       if(keuze[0] == "" || keuze[1] == "" ){
         document.write("U heeft geen maand of jaar geselecteerd");
       } else {
@@ -65,8 +64,7 @@
         var d = new Date(keuze[0], keuze[1]);
 
         var monthNames = [ "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December" ];
-
+        "July", "August", "September", "October", "November", "December"];
 
         var weekday = new Array(7);
          weekday[0] = "Sunday";
@@ -76,8 +74,6 @@
          weekday[4] = "Thursday";
          weekday[5] = "Friday";
          weekday[6] = "Saturday";
-
-
 
         document.body.innerHTML += "<br>" + d.getFullYear();
         document.body.innerHTML += "<br>" + monthNames[d.getMonth()-1];
@@ -89,6 +85,5 @@
       }
     }
     </script>
-
   </body>
 </html>
