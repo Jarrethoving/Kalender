@@ -48,23 +48,23 @@
 
     function printTable(monthLength) {
       innerPrint("<table border='1' cellpadding='3'>");
-        innerPrint(document.body.innerHTML += "<thead><tr>");
-          document.body.innerHTML += "<th>zo</th>";
-          document.body.innerHTML += "<th>ma</th>";
-          document.body.innerHTML += "<th>di</th>";
-          document.body.innerHTML += "<th>wo</th>";
-          document.body.innerHTML += "<th>do</th>";
-          document.body.innerHTML += "<th>vr</th>";
-          document.body.innerHTML += "<th>za</th>";
-        document.body.innerHTML += "</tr><thead>";
-        document.body.innerHTML += "<tbody>";
+        innerPrint("<thead><tr>");
+          innerPrint("<th>zo</th>");
+          innerPrint("<th>ma</th>");
+          innerPrint("<th>di</th>");
+          innerPrint("<th>wo</th>");
+          innerPrint("<th>do</th>");
+          innerPrint("<th>vr</th>");
+          innerPrint("<th>za</th>");
+          innerPrint("</tr><thead>");
+        innerPrint("<tbody>");
       for(var i = 1; i <= monthLength; i++) {
-        document.body.innerHTML += "<tr>";
-          document.body.innerHTML += "<td>" + i + "</td>";
-        document.body.innerHTML += "<tr>";
+        innerPrint("<tr>");
+          innerPrint("<td>" + i + "</td>");
+          innerPrint("<tr>");
       }
-      document.body.innerHTML += "</tbody>";
-      document.body.innerHTML += "</table>";
+      innerPrint("</tbody>");
+      innerPrint("</table>");
     }
 
     // Na "Submit" staan de waarden in de array
