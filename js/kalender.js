@@ -22,7 +22,8 @@ function daysInMonth(month, year) {
 function printTable(monthLength) {
   var d = new Date(keuze[0], keuze[1]);
 
-  document.body.innerHTML +="<br>"+ monthNames[d.getMonth()-1];
+  document.body.innerHTML +="<br>"+ monthNames[d.getMonth()-1] + " " + d.getFullYear();
+  document.body.innerHTML +="<br>";
 
   var body = document.getElementsByTagName("body")[0];
 
