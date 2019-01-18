@@ -18,7 +18,7 @@ function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
 
-// print month table 
+// print month table
 function printTable(monthLength) {
   var d = new Date(keuze[0], keuze[1]);
 
@@ -76,7 +76,7 @@ function submit() {
 =======
 >>>>>>> f2158fa593a6f708e8461e816adb2c93daadc965
 =======
->>>>>>> 2b8a0ac88f947c6276517a0d3f46d031595c728c
+>> 2b8a0ac88f947c6276517a0d3f46d031595c728c
     // Check if data is entered
     if(keuze[0] == "" || keuze[1] == "" ){
       document.body.innerHTML += "<br>" + "U heeft geen maand of jaar geselecteerd";
