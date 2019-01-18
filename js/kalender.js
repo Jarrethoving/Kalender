@@ -22,7 +22,7 @@ function daysInMonth(month, year) {
 function printTable(monthLength) {
   var d = new Date(keuze[0], keuze[1]);
 
-  document.body.innerHTML +="<br>"+ monthNames[d.getMonth()-1] + " " + d.getFullYear();
+  document.body.innerHTML +="<br><h3>"+ monthNames[d.getMonth()-1] + " " + d.getFullYear() + "</br>";
   document.body.innerHTML +="<br>";
 
   var body = document.getElementsByTagName("body")[0];
@@ -52,31 +52,10 @@ function submit() {
     keuze[0] = document.getElementById("Jaar").value;
     keuze[1] = document.getElementById("Maand").value;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f2158fa593a6f708e8461e816adb2c93daadc965
-=======
->> 2b8a0ac88f947c6276517a0d3f46d031595c728c
-=======
->>>>>>> 8e872e27f1792057c18fca203e4cb049af466598
     // Check if data is entered
     if(keuze[0] == "" || keuze[1] == "" ){
       document.body.innerHTML += "<br>" + "U heeft geen maand of jaar geselecteerd";
     } else {
-      printTable();
-
-      // var d = new Date(keuze[0], keuze[1]);
-      /*
-      document.body.innerHTML +="<br>"+ keuze[1];
-      document.body.innerHTML +="<br>"+ keuze[0];
-
-      document.body.innerHTML += "<br>" + d.getFullYear();
-      document.body.innerHTML += "<br>" + monthNames[d.getMonth()-1];
-      document.body.innerHTML += "<br>" + daysInMonth(keuze[1], keuze[0]);
-      document.body.innerHTML += "<br>" + weekday[d.getDay()];
       printTable(daysInMonth(keuze[1], keuze[0]));
-      */
-
     }
   }
