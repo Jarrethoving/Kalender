@@ -48,35 +48,18 @@ function printTable(monthLength) {
   tbl.setAttribute("border", "2");
 }
 
-<<<<<<< HEAD:kalender.js
-<<<<<<< HEAD
-function submit(){
-<<<<<<< HEAD
-=======
-function test() {
-    var keuze = new Array();
-    keuze[0] = document.getElementById("Jaar").value;
-    keuze[1] = document.getElementById("Maand").value;
-
-    keuze[0] = 2018;
-    keuze[1] = 1;
-    submit();
-}
-
-function submit(){
->>>>>>> 2b8a0ac88f947c6276517a0d3f46d031595c728c
-    var keuze = new Array();
-=======
 function submit() {
->>>>>>> 7c95e84d7cf1253aa23c115eefb80da3f1bb236a:js/kalender.js
     keuze[0] = document.getElementById("Jaar").value;
     keuze[1] = document.getElementById("Maand").value;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f2158fa593a6f708e8461e816adb2c93daadc965
 =======
 >> 2b8a0ac88f947c6276517a0d3f46d031595c728c
+=======
+>>>>>>> 8e872e27f1792057c18fca203e4cb049af466598
     // Check if data is entered
     if(keuze[0] == "" || keuze[1] == "" ){
       document.body.innerHTML += "<br>" + "U heeft geen maand of jaar geselecteerd";
